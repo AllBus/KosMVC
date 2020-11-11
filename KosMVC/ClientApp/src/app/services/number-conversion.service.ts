@@ -65,7 +65,9 @@ export class NumberConversionService {
   private parseError(error: HttpErrorResponse):ConvertResult{
     let convertResult = new ConvertResult("")
     convertResult.hasResult = false
-     switch(error.status) {
+    switch (error.status) {
+      case 400: convertResult.error = "Введите неотрицательное целое число"
+        break;
       case 404: convertResult.error = "Запрос к несуществующей странице"
         break;
       case 503: convertResult.error = "Сервер не доступен"

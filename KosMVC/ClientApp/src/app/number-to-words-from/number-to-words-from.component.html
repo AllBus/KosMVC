@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row justify-content-center m-3">
+    <div class="number-form input-group row-4">
+        <div class="input-group-prepend">
+            <button class="btn btn-primary" [disabled]="!enable || inputNumber.invalid" (click)="convertValue()" >{{buttonText}}</button>
+        </div>
+        <input class="form-control" [(ngModel)]="inputValue" type="text" [placeholder]="placeholder" #inputNumber="ngModel" required  >
+        
+    </div>
+    </div>
+</div> 

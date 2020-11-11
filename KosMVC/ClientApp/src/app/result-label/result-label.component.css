@@ -1,0 +1,11 @@
+.result-container{
+    text-align: center;
+}
+
+.errorBox {
+    color: red;
+}
+
+.successBox {
+    color: #333;
+}

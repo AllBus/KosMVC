@@ -1,6 +1,18 @@
 <body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
+  <div class="app-container">
+        <app-result-label
+        [convertResult]="state.convertResult"></app-result-label>
+        <app-number-to-words-from 
+          [enable]="!state.loading"
+          placeholder="число" 
+          buttonText="отправить" 
+          (onButtonClick)="convertNumberToWords($event)">
+        </app-number-to-words-from>
+        <app-number-to-words-from 
+          [enable]="!state.loading"
+          placeholder="доллар"  
+          buttonText="отправить"
+          (onButtonClick)="convertNumberToDollars($event)">
+        </app-number-to-words-from>
   </div>
 </body>

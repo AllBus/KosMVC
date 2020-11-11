@@ -1,0 +1,5 @@
+<div class="result-container">
+    <div *ngIf="!convertResult.error; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock> <p class="successBox">{{convertResult.text}}</p></ng-template>
+    <ng-template #elseBlock> <p class="errorBox">{{convertResult.error}}</p></ng-template>
+</div>

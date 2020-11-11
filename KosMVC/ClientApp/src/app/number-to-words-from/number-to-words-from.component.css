@@ -1,0 +1,7 @@
+.number-form{
+    max-width: 520px;
+}
+
+:invalid {
+    box-shadow: none;
+}  
